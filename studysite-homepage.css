@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(./images/bgbgbg.jpg);
+    background-size: cover;
+}
+
+.header {
+    background-color: #7b6849;
+    height: 55px;
+    width: 770px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    filter: drop-shadow(5px 10px 4px #68583d);
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 126px;
+}
+
+.nav {
+    height: 50px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.home{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+.sidebar {
+
+    background-color: #7b6849;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    width: 70px;
+    gap: 40px;
+    padding: 20px;
+    margin-left: 10px;
+    border-radius: 10px;
+    filter: drop-shadow(5px 10px 20px #68583d);
+}
+
+.button-styling {
+    border: none;
+    background-color: #d2c2a1;
+    height: 60px;
+    width: 60px;
+    text-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+
+
+.button-styling:hover {
+    border: solid #50432f 2px;
+}
+
+.sidebar:hover {
+    /* padding-right: 100px; */
+    width: 150px;
+}
+
+.button-styling:hover {
+    padding-right: 100px;
+    justify-self: start;
+
+}
+h1{
+    font-weight: 100;
+}
+
+
+.primary-text, .secondary-text {
+    font-weight: 800;
+    font-size: 1.75rem;
+}
+.secondary-text {
+    font-weight: 500;
+    font-size: 1.75rem;
+}
+
+
+/* ************UTILITY CLASSES*************8 */
+.flex {
+    display: flex;
+
+}
+
+/* *******************************RESPONSIVNESS************************************************8 */
+@media(min-width:360px) and (max-width:770px){
+   
+    .header {
+        background-color: #7b6849;
+        height: 60px;
+        width: 300px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        filter: drop-shadow(5px 10px 4px #68583d);
+    }
+    .secondary-text {
+        display: none;
+    }
+    .primary-text{
+        font-size: 2rem;
+        font-stretch: extra-expanded;
+    }
+    .home{
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+    }
+.sidebar{
+    display: none;
+}
+
+ }

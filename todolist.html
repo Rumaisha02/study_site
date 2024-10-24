@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studysite</title>
+  <link rel="stylesheet" href="TODO.css">
+  <link rel="stylesheet" href="studysite-timer.css">
+  <link rel="stylesheet" href="studysite-homepage.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./timer.js"></script>
+
+  </head>
+</head>
+
+<body>
+  <!-- <style>
+    body
+   {
+    font-family: Arial, sans-serif;
+    background-color: #d4cdb1;
+    color: #b11111;
+    margin: 0;
+    padding: 0; 
+    
+    }
+</style> -->
+
+
+  <div class="main">
+    <div class="nav flex">
+      <div class="header " style="display: flex;">
+        <h1>Studysite:Your companion for efficient study management </h1>
+      </div>
+    </div>
+
+    <div class="home ">
+      <!-- **icon GRID** -->
+
+      <div class="sidebar flex">
+        <a class="" href="">
+          <div> <button class="button-styling"><img src="todolist.svg" alt=""></button></div>
+        </a>
+        <a href="./studysite-notes.html">
+          <div> <button class="button-styling"><img src="notes.svg" alt=""></button></div>
+        </a>
+        <a href="./studysite-progress.html">
+          <div> <button class="button-styling"><img src="progress.svg" alt=""></buttonclas>
+          </div>
+        </a>
+        <!-- <a href="./timer.html">
+          <div> <button class="button-styling"><img src="timer.svg" alt=""></button></div>
+        </a> -->
+
+      </div>
+      <!-- CENTRE GRID -->
+       <div class="center">
+      <div class="box">
+        <h2>To Do List</h2>
+        <input type="text" placeholder="Type your list here.." maxlength="150" id="TodoinputBx">
+        <ul id="Todolist"></ul>
+      </div>
+    <script>
+      let TodoinputBx = document.querySelector('#TodoinputBx');
+      let Todolist = document.querySelector('#Todolist');
+
+      TodoinputBx.addEventListener("keyup", function (work) {
+        if (work.key == "Enter") {
+          addItem(this.value)
+          this.value = ""
+        }
+      })
+
+      let addItem = (TodoinputBx) => {
+        let TodolistItem = document.createElement("li");
+        TodolistItem.innerHTML = `${TodoinputBx}<i></i>`;
+        // TO MARK DONE FOR COMPLETED TASK
+        TodolistItem.addEventListener("click", function () {
+          this.classList.toggle('done');
+        })
+        // TO REMOVE THE COMPLETED TASK
+        TodolistItem.querySelector("i").addEventListener("click", function () {
+          TodolistItem.remove();
+        })
+        Todolist.appendChild(TodolistItem);
+      }
+    </script>
+    </div>
+   
+    <!-- ***************TIMER GRID********************* -->
+
+
+    <div class="timerbar flex">
+      <section>
+      <div class="containerBOX">
+          <!-- <h1 id="main-heading">Pomodora Timer</h1> -->
+          <div class="pannel">
+              <div class="WorkStatus">
+                  <p id="Work"  class="active " >Work</pid>
+                  <p id="Break" >Break</p>
+              </div>
+          </div>
+
+          <div class="Timer">
+             <div class="Watch">
+              <div class="Time">
+                   <p id="Minutes" >25</p>
+                   <p  >:</p>
+                   <p id="Second" >00</p>
+              </div>
+             </div>
+          </div>
+
+          <div class="controllingbuttons">
+                  <button id="start"class="buttondesign" onclick="start()"><i class="fa-solid fa-play"></i></button>
+                  <a  id="reset" href="" > <button class="buttondesign"><i class="fa-solid fa-arrow-rotate-left"></i></button></a>
+          </div>
+
+      </div>
+  </section>
+  </div>
+    </div>
+  </div>
+
+  <!-- *************************to do list********************************8 -->
+
+
+
+  </div>
+
+</body>
+
+</html>

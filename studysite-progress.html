@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studysite:homepage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="studysite-homepage.css">
+    <link rel="stylesheet" href="studysite-timer.css">
+    <!-- <link rel="stylesheet" href="./TODO.css"> -->
+</head>
+
+<body>
+    <div class="main" >
+        <div class="nav flex">
+            <div class="header  flex" >
+                <h1 >Studysite:Your companion for efficient study management </h1>
+            </div>
+        </div>
+       
+        <div class="home">
+
+                    <!-- ***ICON GRID**** -->
+                     <div>
+            <div class="sidebar flex">
+                <a href="./todolist.html"><div > <button class="button-styling"><img src="todolist.svg" alt=""></button></div></a>
+                <a href="./studysite-notes.html"><div> <button class="button-styling"><img src="notes.svg" alt=""></button></div></a>
+                <a href=""><div> <button class="button-styling"><img src="progress.svg" alt=""></buttonclas></div></a>
+                <!-- <a href=""><div> <button class="button-styling"><img src="timer.svg" alt=""></button></div></a> -->
+
+            </div></div>
+             <!-- **CENTRE GRID** -->
+
+             <div class="center"> 
+                <style>
+                    /* body {
+                        font-family: Arial, sans-serif;
+                        background-color: #d3bfa6;
+                        color: #333;
+                        margin: 0;
+                        padding: 0;
+                    } */
+            
+                    .containerrrr {
+                        width: 80%;
+                        margin: 20px auto;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+            
+                    .progress-tracker {
+                        background-color: #f8f4ec;
+                        padding: 20px;
+                        border-radius: 10px;
+                        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+                        width: 100%;
+                        max-width: 600px;
+                        margin-top: 20px;
+                        height: 57vh;
+                        overflow: auto;
+                    }
+            
+                    .progress-tracker h2 {
+                        margin-top: 0;
+                        text-align: center;
+                        color: #000000;
+                    }
+            
+                    .task {
+                        margin: 15px 0;
+                    }
+            
+                    .task-title {
+                        margin-bottom: 5px;
+                    }
+            
+                    .progress-bar {
+                        width: 100%;
+                        background-color: #d3bfa6;
+                        border-radius: 5px;
+                        overflow: hidden;
+                    }
+            
+                    .progress {
+                        height: 20px;
+                        background-color: #7b6849;
+                        text-align: center;
+                        line-height: 20px;
+                        color: white;
+                        width: 0;
+                    }
+            
+                    .task-status {
+                        text-align: center;
+                        margin-top: 5px;
+                    }
+            
+                    .update-progress {
+                        margin-top: 10px;
+                        text-align: center;
+                    }
+            
+                    .update-progress input[type="number"] {
+                        width: 50px;
+                        padding: 5px;
+                        border-radius: 5px;
+                        border: 1px solid #ccc;
+                        text-align: center;
+                    }
+            
+                    .update-progress button {
+                        padding: 5px 10px;
+                        border-radius: 5px;
+                        border: none;
+                        background-color: #7b6849;
+                        color: white;
+                        cursor: pointer;
+                        margin-left: 10px;
+                    }
+            
+                    .update-progress button:hover {
+                        background-color: #7b6849;
+                    }
+            
+                    .new-task {
+                        margin-bottom: 20px;
+                        text-align: center;
+                    }
+            
+                    .new-task input[type="text"] {
+                        width: 200px;
+                        padding: 10px;
+                        border-radius: 5px;
+                        border: 1px solid #ccc;
+                    }
+            
+                    .new-task button {
+                        padding: 10px 20px;
+                        border-radius: 5px;
+                        border: none;
+                        background-color: #7b6849;
+                        color: #000000;
+                        cursor: pointer;
+                        margin-left: 10px;
+                    }
+            
+                    .new-task button:hover {
+                        background-color: #7b6849;
+                    }
+                </style>
+            </head>
+            <body>
+                <div class="containerrrr">
+                    <!-- Task Input Section -->
+                    <div class="new-task">
+                        <input type="text" id="newTaskName" placeholder="Enter new task">
+                        <button onclick="addTask()">Add Task</button>
+                    </div>
+            
+                    <!-- Progress Tracker Section -->
+                    <div class="progress-tracker" id="taskContainer">
+                        <h2>Progress Tracker</h2>
+                        <!-- Tasks will be dynamically added here -->
+                    </div>
+                </div>
+            
+                <script>
+                    function addTask() {
+                        const taskContainer = document.getElementById('taskContainer');
+                        const taskName = document.getElementById('newTaskName').value;
+            
+                        if (taskName.trim() === '') {
+                            alert('Please enter a task name.');
+                            return;
+                        }
+            
+                        // Create task element
+                        const taskElement = document.createElement('div');
+                        taskElement.className = 'task';
+            
+                        taskElement.innerHTML = `
+                            <div class="task-title">${taskName}</div>
+                            <div class="progress-bar">
+                                <div class="progress">0%</div>
+                            </div>
+                            <div class="task-status">Not Started</div>
+                            <div class="update-progress">
+                                <input type="number" min="0" max="100" placeholder="%" value="0">
+                                <button onclick="updateTaskProgress(this)">Update</button>
+                            </div>
+                        `;
+            
+                        taskContainer.appendChild(taskElement);
+            
+                        // Clear the input field
+                        document.getElementById('newTaskName').value = '';
+                    }
+            
+                    function updateTaskProgress(buttonElement) {
+                        const taskElement = buttonElement.closest('.task');
+                        const progressBar = taskElement.querySelector('.progress');
+                        const taskStatus = taskElement.querySelector('.task-status');
+                        const input = taskElement.querySelector('input[type="number"]').value;
+            
+                        if (input >= 0 && input <= 100) {
+                            progressBar.style.width = input + '%';
+                            progressBar.textContent = input + '%';
+            
+                            if (input == 100) {
+                                taskStatus.textContent = 'Completed';
+                            } else if (input > 0) {
+                                taskStatus.textContent = 'In Progress';
+                            } else {
+                                taskStatus.textContent = 'Not Started';
+                            }
+                        } else {
+                            alert('Please enter a value between 0 and 100.');
+                        }
+                    }
+                </script>
+             </div>
+
+                    <!-- *TIMER** -->
+
+            <div class="timerbar flex">
+                <section>
+                <div class="containerBOX">
+                    <!-- <h1 id="main-heading">Pomodora Timer</h1> -->
+                    <div class="pannel">
+                        <div class="WorkStatus">
+                            <p id="Work"  class="active " >Work</pid>
+                            <p id="Break" >Break</p>
+                        </div>
+                    </div>
+        
+                    <div class="Timer">
+                       <div class="Watch">
+                        <div class="Time">
+                             <p id="Minutes" >25</p>
+                             <p  >:</p>
+                             <p id="Second" >00</p>
+                        </div>
+                       </div>
+                    </div>
+        
+                    <div class="controllingbuttons">
+                            <button class="buttondesign"  aria-placeholder="start" id="start" onclick="start()"><i class="fa-solid fa-play"></i></button>
+                            <a  id="reset" href=""><button class="buttondesign"><i class="fa-solid fa-arrow-rotate-left"></i></button></a>
+                    </div>
+        
+                </div>
+            </section>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="timer.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+.WorkStatus{
+    display: flex;
+    gap: 49px;
+    justify-content: center;
+    align-items: center;
+    /* background-color: ; */
+    width: 180px;
+    height: 50px;
+
+}
+
+.WorkStatus>p{
+    font-size: 25px;
+
+}
+section{
+    height: 260px;
+    width: 260px;
+   background-color:    #7b6849;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 10px;
+}
+.containerBOX{
+    border-radius: 10px;
+    display: flex;
+    background-color: #d2c2a1;
+    width: 220px;
+    height: 220px;
+    flex-direction: column;
+    gap: 10px;
+    filter: drop-shadow(5px 10px 4px #6f5e41);
+}
+.timerbar{
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.pannel{
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Time{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        height: 85px;
+}
+.Time>p{
+    font-size: 30px;
+}
+.controllingbuttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+   
+}
+.buttondesign{
+   background-color: #7b6849;
+    height: 30px;
+    width: 50px;
+    border: none;
+    font-style: normal;
+    font-weight: 400;
+    font-family: 'Times New Roman', Times, serif;
+}

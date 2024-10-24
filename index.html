@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studysite:Login</title>
+    <link rel="stylesheet" href="studysite-login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shantell+Sans:wght@500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+
+    <div class="main"></div>
+    <!-- <div class="navbar">
+        <h1>Studysite:The productivity area</h1>
+    </div> -->
+    <div class="home container">
+        <!-- <div class="grid1 flex-cl">
+
+            <p> A studysite related to basic
+                time and work management requirements that we
+                need in our life on daily basis.
+                It includes a To-Do list,notes section,timer and a progress tracker.
+
+            </p>
+        </div> -->
+        <div class="grid2 flex-cl">
+
+            <div class="login-container">
+                <h2>Login To Continue</h2>
+                <form onsubmit="return handleLogin(event)">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    </div>
+<!-- *******************LOGIN <SCRIPT></SCRIPT>************************** -->
+    <script>
+        function handleLogin(event) {
+            event.preventDefault(); // Prevent form submission
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Simple login check (replace with actual logic)
+            if (username === 'john' && password === 'ab@123') {
+                // alert('Login successful!');
+                window.location.href = 'studysit-homepage.html'; // Redirect to the home page
+            }
+            if(username==="rumi" && password==="rumi@12"){
+                window.location.href = 'studysit-homepage.html';
+            }
+             else {
+                alert('Invalid username or password.');
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+body {
+    
+    margin: 0;
+    padding: 0;
+    background-image: url(./images/bgbgbg.jpg);
+    background-size: cover;
+   
+
+}
+
+/* .navbar {
+    height: 100px;
+    width: 100%;
+    background-color:#d8d1c4 ;
+    opacity: 80;
+    filter: drop-shadow(5px 14px 10px #cfc5b0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.home {
+    height: 85.25vh;
+
+    /* background-color: red; */
+}
+
+.grid1>p {
+    font-optical-sizing: auto;
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: left;
+    padding: 20px;
+    letter-spacing: 5px;
+}
+
+.grid1 {
+    justify-content: center;
+    align-items: center;
+}
+
+.grid2 {
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* **************************LOGIN-STYLING************************************ */
+
+
+/* body {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('./background.jpeg'); /* Replace 'your-image.jpg' with the path to your image */
+/* Prevents the image from repeating */
+
+
+.login-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    /* White background with some transparency */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 300px;
+}
+
+h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* font-family: "Playfair Display", serif; */
+    font-weight: 200;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+   padding-top: 10px;
+   padding-bottom: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+ 
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color:#7b6849;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* *****************UTILITY CLASSES********************* */
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.flex-cl {
+    display: flex;
+    flex-direction: column;
+
+
+}
